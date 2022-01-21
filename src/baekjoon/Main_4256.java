@@ -1,3 +1,9 @@
+/**
+ * 백준 4256번
+ * 트리
+ * https://www.acmicpc.net/problem/4256
+ */
+
 package baekjoon;
 
 import java.io.BufferedReader;

@@ -1,7 +1,7 @@
 /**
  * 백준 11660번
  * 구간 합 구하기 5
- *
+ * https://www.acmicpc.net/problem/11660
  */
 
 package baekjoon;
