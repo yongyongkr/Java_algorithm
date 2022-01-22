@@ -11,11 +11,8 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main_1922 {
@@ -38,7 +35,7 @@ public class Main_1922 {
 	}
 
 	static int[] parent;
-	static List<Edge> edges = new ArrayList<>();
+	static Queue<Edge> edges = new PriorityQueue<>();
 
 	public static void main(String[] args) throws IOException {
 
@@ -55,16 +52,14 @@ public class Main_1922 {
 				Integer.parseInt(st.nextToken())));
 		}
 
-		Collections.sort(edges);
-
 		parent = new int[n + 1];
 		for (int i = 1; i <= n; i++) {
 			parent[i] = i;
 		}
 
 		int sum = 0;
-		for (int i = 0; i < edges.size(); i++) {
-			Edge edge = edges.get(i);
+		while (!edges.isEmpty()) {
+			Edge edge = edges.poll();
 			if (find(edge.v1) != find(edge.v2)) {
 				sum += edge.cost;
 				union(edge.v1, edge.v2);
