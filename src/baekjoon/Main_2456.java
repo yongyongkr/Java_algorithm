@@ -1,3 +1,9 @@
+/**
+ * 백준 2456번
+ * 나는 학급회장이다
+ * https://www.acmicpc.net/problem/2456
+ */
+
 package baekjoon;
 
 import java.io.BufferedReader;
