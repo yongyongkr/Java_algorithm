@@ -9,14 +9,15 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.List;
 
-class TreeNode {
-     int val;
-     TreeNode left;
-     TreeNode right;
-     TreeNode(int val) { this.val = val; }
- }
-
 public class Solution_Unique_Binary_Search_Trees_2 {
+
+	static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+		TreeNode(int val) { this.val = val; }
+	}
+
 	public List<TreeNode> generateTrees(int n) {
 		if (n == 0) return new ArrayList<>();
 
