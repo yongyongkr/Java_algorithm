@@ -1,3 +1,9 @@
+/**
+ * 백준 1256번
+ * 사전
+ * https://www.acmicpc.net/problem/1256
+ */
+
 package baekjoon;
 
 import java.io.BufferedReader;

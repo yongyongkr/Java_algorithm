@@ -13,8 +13,8 @@ import java.util.StringTokenizer;
 
 class Main_14499 {
 
-    static int dx[] = {0, 0, -1, 1};
-    static int dy[] = {1, -1, 0, 0};
+    static int[] dx = {0, 0, -1, 1};
+    static int[] dy = {1, -1, 0, 0};
 
     public static void main(String[] args) throws IOException {
 

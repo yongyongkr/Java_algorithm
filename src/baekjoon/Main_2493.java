@@ -56,10 +56,10 @@ public class Main_2493 {
 		}
 
 		StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < answer.length; i++) {
-			sb.append(answer[i]).append(" ");
+		for (int j : answer) {
+			sb.append(j).append(" ");
 		}
 		sb.setLength(sb.length() - 1);
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 }

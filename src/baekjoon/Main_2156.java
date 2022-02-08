@@ -41,11 +41,9 @@ class Main_2156 {
             }
 
             for (int i = 3; i < n; i++) {
-                if (dp[i - 3] + wine[i - 1] + wine[i] < dp[i - 2] + wine[i]) {
-                    dp[i] = dp[i - 2] + wine[i];
-                } else {
-                    dp[i] = dp[i - 3] + wine[i - 1] + wine[i];
-                }
+                int notSelectLeft = dp[i - 2] + wine[i];
+                int selectLeft = dp[i - 3] + wine[i - 1] + wine[i];
+                dp[i] = Math.max(selectLeft, notSelectLeft);
                 if (dp[i] < dp[i - 1]) {
                     dp[i] = dp[i - 1];
                 }

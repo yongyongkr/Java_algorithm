@@ -29,11 +29,7 @@ class Main_1932 {
         for (int i = 0; i < n - 1; i++) {
             dp[i + 1][0] += dp[i][0];
             for (int j = 0; j < i; j++) {
-                if (dp[i][j] < dp[i][j + 1]) {
-                    dp[i + 1][j + 1] += dp[i][j + 1];
-                } else {
-                    dp[i + 1][j + 1] += dp[i][j];
-                }
+                dp[i + 1][j + 1] += Math.max(dp[i][j], dp[i][j + 1]);
             }
             dp[i + 1][i + 1] += dp[i][i];
         }

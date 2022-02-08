@@ -71,7 +71,7 @@ public class Main_16768 {
 			sb.append("\n");
 		}
 		sb.deleteCharAt(sb.length() - 1);
-		System.out.println(sb.toString());
+		System.out.println(sb);
 	}
 
 	private static void down() {

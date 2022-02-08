@@ -17,8 +17,8 @@ public class Main_1103 {
 	static boolean flag;
 	static boolean[][] visited;
 	static int[][] map, dp;
-	static int dx[] = {1, -1, 0, 0};
-	static int dy[] = {0, 0, 1, -1};
+	static int[] dx = {1, -1, 0, 0};
+	static int[] dy = {0, 0, 1, -1};
 
 	public static void main(String[] args) throws IOException {
 
