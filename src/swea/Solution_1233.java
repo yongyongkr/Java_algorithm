@@ -4,7 +4,7 @@
  * https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV141176AIwCFAYD
  */
 
-package swea.d4;
+package swea;
 
 import java.io.BufferedReader;
 import java.io.IOException;

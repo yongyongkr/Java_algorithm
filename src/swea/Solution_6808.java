@@ -3,7 +3,7 @@
  * 규영이와 인영이의 카드게임
  */
 
-package swea.d4;
+package swea;
 
 import java.io.BufferedReader;
 import java.io.IOException;

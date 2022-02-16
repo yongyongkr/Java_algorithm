@@ -3,7 +3,7 @@
  * 정사각형 방
  */
 
-package swea.d4;
+package swea;
 
 import java.io.BufferedReader;
 import java.io.IOException;
