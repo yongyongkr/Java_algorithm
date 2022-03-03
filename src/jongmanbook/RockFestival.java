@@ -1,21 +1,9 @@
 /**
  * 종만북
- * 6페이지
- * 문제 : 록 페스티벌 (난이도 : 하, 문제 ID : Festival)
+ * 록 페스티벌
+ * https://algospot.com/judge/problem/read/FESTIVAL
  */
 
-/*
-예제 입력
-2
-6 3
-1 2 3 1 2 3
-6 2
-1 2 3 1 2 3
-
-예제 출력
-1.7500000000
-1.5000000000
- */
 package jongmanbook;
 
 import java.io.BufferedReader;
