@@ -26,6 +26,7 @@ public class Main_1520 {
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
 		map = new int[n + 1][m + 1];
+		map = new int[n + 1][m + 1];
 		dp = new int[n + 1][m + 1];
 
 		for (int i = 1; i <= n; i++) {
