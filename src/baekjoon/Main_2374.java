@@ -1,3 +1,9 @@
+/**
+ * 백준 2374번
+ * 같은 수로 만들기
+ * https://www.acmicpc.net/problem/2374
+ */
+
 package baekjoon;
 
 import java.io.BufferedReader;
