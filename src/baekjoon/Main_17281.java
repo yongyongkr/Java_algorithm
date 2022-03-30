@@ -9,8 +9,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main_17281 {
@@ -31,56 +30,46 @@ public class Main_17281 {
 			}
 		}
 
-		boolean[] visited = new boolean[9];
 		int[] order = new int[9];
-		visited[3] = true;
+		Arrays.fill(order, -1);
 		order[3] = 0;
-		permutation(1, visited, order);
+		permutation(1, order);
 
 		System.out.println(maxScore);
 	}
 
-	private static void permutation(int player, boolean[] visited, int[] order) {
+	private static void permutation(int player, int[] order) {
 		if (player == 9) {
 			calculateScore(order);
 			return;
 		}
 		for (int i = 0; i < 9; i++) {
-			if (visited[i])
+			if (order[i] != -1)
 				continue;
-			visited[i] = true;
 			order[i] = player;
-			permutation(player + 1, visited, order);
-			visited[i] = false;
+			permutation(player + 1, order);
+			order[i] = -1;
 		}
 	}
 
 	private static void calculateScore(int[] order) {
 		int totalScore = 0;
 		int idx = 0;
-		for (int i = 0; i < game.length; i++) {
+		for (int[] ints : game) {
 			int outCnt = 0;
-			Queue<Integer> q = new LinkedList<>();
+			int base = 0;
 			while (outCnt < 3) {
-				int player = order[idx++];
-				if (idx == 9) {
-					idx = 0;
-				}
-				int score = game[i][player];
+				int player = order[idx++ % 9];
+				int score = ints[player];
 				if (score == 0) {
 					outCnt++;
 					continue;
 				}
-				q.offer(0);
-				int size = q.size();
-				while (size-- > 0) {
-					int poll = q.poll();
-					if (poll + score >= 4) {
-						totalScore++;
-					} else {
-						q.offer(poll + score);
-					}
-				}
+				base <<= score;
+				base |= 1 << score;
+				int cur = base % (1 << 4);
+				totalScore += Integer.bitCount(base) - Integer.bitCount(cur);
+				base = cur;
 			}
 		}
 		maxScore = Math.max(maxScore, totalScore);
